@@ -1,0 +1,12 @@
+# Prettier formats .svelte files only — Biome owns everything else.
+**/*.{js,ts,jsx,tsx,mjs,cjs,json,jsonc,css,md,html,yaml,yml}
+
+# Build output / vendored / generated
+node_modules
+.svelte-kit
+build
+.vercel
+.netlify
+.wrangler
+/static
+pnpm-lock.yaml
