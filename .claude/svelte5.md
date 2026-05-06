@@ -2,6 +2,8 @@
 
 This file is the project's reference for writing idiomatic Svelte 5 and SvelteKit code. Read it before touching any `.svelte`, `.svelte.ts`, or SvelteKit route file.
 
+**See also:** [`.claude/structure.md`](structure.md) for folder organization and where to place new code.
+
 For deeper questions, consult the official LLM-friendly docs:
 
 - Short index: https://svelte.dev/llms.txt

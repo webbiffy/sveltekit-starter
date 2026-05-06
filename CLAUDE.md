@@ -11,4 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Writing Svelte and SvelteKit code
 
-The project uses Svelte 5 (runes mode is forced) and SvelteKit's file-based routing. Before writing or modifying any `.svelte`, `.svelte.ts`, or `+page.*` / `+layout.*` / `+server.*` file, read `.claude/svelte5.md` for the conventions this project follows.
+The project uses Svelte 5 (runes mode is forced) and SvelteKit's file-based routing with vertical slice architecture. Before writing or modifying any `.svelte`, `.svelte.ts`, or `+page.*` / `+layout.*` / `+server.*` file:
+
+1. Read `.claude/structure.md` for folder organization and where to place new files.
+2. Read `.claude/svelte5.md` for Svelte 5 and SvelteKit conventions.
