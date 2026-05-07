@@ -12,6 +12,7 @@ The stack and tooling choices reflect what I personally enjoy working with. It i
 - Tailwind CSS v4 via the official Vite plugin
 - shadcn-svelte for components (Nova style, Neutral base color)
 - Lucide for icons
+- mode-watcher for dark mode (class-based, persists to localStorage, respects system preference)
 - Inter as the default font (via @fontsource-variable/inter)
 - Biome for linting and formatting JavaScript, TypeScript, JSON, and CSS
 - Prettier with prettier-plugin-svelte for .svelte files only (Biome's Svelte support is still experimental)
