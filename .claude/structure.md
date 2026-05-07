@@ -24,7 +24,8 @@ src/
     +error.svelte
   lib/
     components/
-      common/          # Design system (Button, Input, Dialog, etc.)
+      ui/              # shadcn-svelte components — never hand-edit, use CLI to add/update
+    hooks/             # Reusable reactive utilities (*.svelte.ts using runes)
     utils/             # Cross-feature shared helpers
     types/             # Shared types used by multiple features
     server/            # Shared server code (DB, session, auth)
@@ -76,7 +77,8 @@ Keep utilities close to where they're used. Extract to `src/lib/utils.ts` only w
 ## Guidelines
 
 - **Put it in a feature folder** if it belongs to one feature only (component, store, type, util).
-- **Put it in `lib/common`** if it's a reusable design system component (Button, Input, Modal).
+- **Put it in `lib/components/ui/`** if it's a shadcn-svelte component — add via `pnpm dlx shadcn-svelte@latest add <name>`, never hand-edit.
+- **Put it in `lib/hooks/`** for reusable reactive utilities (e.g., `is-mobile.svelte.ts`). Note: this is different from SvelteKit's own hooks (`src/hooks.server.ts`) — these are shared stateful logic using runes.
 - **Put it at the root of `src/lib/`** (e.g., `src/lib/utils.ts`, `src/lib/constants.ts`) for shared utility files used across multiple features.
 - **Put it in `lib/utils`** or `lib/types`** subdirectories** if grouping related utilities or types by category (e.g., `lib/utils/date.ts`, `lib/utils/validation.ts`).
 - **Put it in `lib/server`** if it's shared server-only code (database, session, auth logic).
