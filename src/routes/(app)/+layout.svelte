@@ -15,12 +15,15 @@
 		GalleryVerticalEnd,
 		LogOut,
 		Map,
+		Moon,
 		PieChart,
 		Plus,
 		Settings2,
 		Sparkles,
-		SquareTerminal
+		SquareTerminal,
+		Sun
 	} from '@lucide/svelte';
+	import { toggleMode, mode } from 'mode-watcher';
 
 	interface Props {
 		children: import('svelte').Snippet;
@@ -248,6 +251,19 @@
 					<ChevronRight class="size-4" />
 					<span class="font-medium text-foreground">Data Fetching</span>
 				</nav>
+			</div>
+			<div class="ml-auto px-4">
+				<button
+					onclick={toggleMode}
+					class="flex size-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+					aria-label="Toggle theme"
+				>
+					{#if mode.current === 'dark'}
+						<Sun class="size-4" />
+					{:else}
+						<Moon class="size-4" />
+					{/if}
+				</button>
 			</div>
 		</header>
 		<main class="flex flex-1 flex-col gap-4 p-4 pt-0">
