@@ -1,7 +1,6 @@
-
 <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-	<div class="bg-muted/50 aspect-video rounded-xl"></div>
-	<div class="bg-muted/50 aspect-video rounded-xl"></div>
-	<div class="bg-muted/50 aspect-video rounded-xl"></div>
+	<div class="aspect-video rounded-xl bg-muted/50"></div>
+	<div class="aspect-video rounded-xl bg-muted/50"></div>
+	<div class="aspect-video rounded-xl bg-muted/50"></div>
 </div>
-<div class="bg-muted/50 min-h-[60vh] flex-1 rounded-xl"></div>
+<div class="min-h-[60vh] flex-1 rounded-xl bg-muted/50"></div>

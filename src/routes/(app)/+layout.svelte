@@ -81,7 +81,6 @@
 		{ name: 'Sales & Marketing', href: '/projects/sales', icon: PieChart },
 		{ name: 'Travel', href: '/projects/travel', icon: Map }
 	];
-
 </script>
 
 <Sidebar.Provider>
@@ -89,7 +88,9 @@
 		<!-- Header: Brand -->
 		<Sidebar.Header>
 			<div class="flex items-center gap-2 px-2 py-2">
-				<div class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+				<div
+					class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
+				>
 					<brand.logo class="size-4" />
 				</div>
 				<div class="grid flex-1 text-left text-sm leading-tight">
@@ -113,7 +114,9 @@
 										<Sidebar.MenuButton {isActive} tooltipContent={item.title} {...props}>
 											<item.icon />
 											<span>{item.title}</span>
-											<ChevronRight class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+											<ChevronRight
+												class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+											/>
 										</Sidebar.MenuButton>
 									{/snippet}
 								</Collapsible.Trigger>
@@ -170,7 +173,9 @@
 						<DropdownMenu.Trigger>
 							{#snippet child({ props })}
 								<Sidebar.MenuButton size="lg" {...props}>
-									<div class="bg-muted flex size-8 items-center justify-center rounded-lg text-sm font-semibold">
+									<div
+										class="flex size-8 items-center justify-center rounded-lg bg-muted text-sm font-semibold"
+									>
 										CN
 									</div>
 									<div class="grid flex-1 text-left text-sm leading-tight">
@@ -184,7 +189,9 @@
 						<DropdownMenu.Content class="w-56" side="right" align="end" sideOffset={4}>
 							<DropdownMenu.Label class="p-0 font-normal">
 								<div class="flex items-center gap-2 px-1 py-1.5">
-									<div class="bg-muted flex size-8 items-center justify-center rounded-lg text-sm font-semibold">
+									<div
+										class="flex size-8 items-center justify-center rounded-lg bg-muted text-sm font-semibold"
+									>
 										CN
 									</div>
 									<div class="grid flex-1 text-left text-sm leading-tight">
@@ -230,14 +237,16 @@
 	</Sidebar.Root>
 
 	<Sidebar.Inset>
-		<header class="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+		<header
+			class="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
+		>
 			<div class="flex items-center gap-2 px-4">
 				<Sidebar.Trigger class="-ml-1" />
-				<div class="bg-border h-4 w-px"></div>
-				<nav class="text-muted-foreground flex items-center gap-1 text-sm">
+				<div class="h-4 w-px bg-border"></div>
+				<nav class="flex items-center gap-1 text-sm text-muted-foreground">
 					<span>Build Your Application</span>
 					<ChevronRight class="size-4" />
-					<span class="text-foreground font-medium">Data Fetching</span>
+					<span class="font-medium text-foreground">Data Fetching</span>
 				</nav>
 			</div>
 		</header>
